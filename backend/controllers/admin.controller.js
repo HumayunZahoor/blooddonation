@@ -139,14 +139,14 @@ export const initializeBloodBank = async (req, res) => {
             return res.status(400).json({ message: "Admin ID is required." });
         }
 
-        console.log("Received adminId:", adminId); // Debugging
+        // console.log("Received adminId:", adminId); // Debugging
 
         // Ensure adminId is converted to ObjectId
         const objectId = new mongoose.Types.ObjectId(adminId);
 
         let bloodBank = await BloodBank.findOne({ adminId: objectId });
 
-        console.log("Existing BloodBank Entry:", bloodBank); // Debugging
+        // console.log("Existing BloodBank Entry:", bloodBank); // Debugging
 
         if (!bloodBank) {
             bloodBank = new BloodBank({ adminId: objectId });
@@ -218,3 +218,19 @@ export const getAllBloodRequests = async (req, res) => {
         res.status(500).json({ message: "Server error. Please try again later." });
     }
 };
+
+//-----------------------------------------------------------------------
+
+// export const getAllNearByBloodRequests = async (req, res) => {
+//     try {
+//         // Fetch all blood requests with donor and admin details
+//         const bloodRequests = await BloodReq.find()
+//             .populate("donorId", "name email") // Fetch donor name & email
+//             .populate("userId", "name email"); // Fetch admin name & email
+
+//         res.status(200).json(bloodRequests);
+//     } catch (error) {
+//         console.error("Error fetching blood requests:", error);
+//         res.status(500).json({ message: "Server error. Please try again later." });
+//     }
+// };

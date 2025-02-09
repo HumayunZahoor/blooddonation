@@ -51,6 +51,9 @@ export default function DashboardLayout() {
         { href: '/BloodDonation/admin-panel', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Admin Panel' },
         { href: '/BloodDonation/blood-requests-admin', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Manage Requests' },
         { href: '/BloodDonation/asknearbydonor', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Ask Nearby Donor' },
+        { href: '/BloodDonation/all-req-to-donor', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'All Requests to Donor' },
+        { href: '/BloodDonation/nearby-request-history', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Nearby Request History' },
+        { href: '/BloodDonation/all-feedbacks', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'All Feedbacks' },
     ];
 
     const hospitalLinks = [
@@ -58,12 +61,15 @@ export default function DashboardLayout() {
         { href: '/BloodDonation/request-blood', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Request Blood' },
         { href: '/BloodDonation/blood-request-history', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Blood Request History' },
         { href: '/BloodDonation/asknearbydonor', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Ask Nearby Donor' },
+        { href: '/BloodDonation/nearby-request-history', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Nearby Request History' },
+        { href: '/BloodDonation/feedback', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Feedback' },
     ];
 
     const donorLinks = [
         { href: '/BloodDonation/dashboard', icon: <RiDashboardFill size="18" className="text-gray-950" />, label: 'Dashboard' },
         { href: '/BloodDonation/blood-requests', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Blood Requests' },
-
+        { href: '/BloodDonation/managenearbybloodreq', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Manage Nearby Requests' },
+        { href: '/BloodDonation/feedback', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Feedback' },
     ];
 
     const userLinks = [
@@ -73,6 +79,8 @@ export default function DashboardLayout() {
         { href: '/BloodDonation/request-blood', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Request Blood' },
         { href: '/BloodDonation/blood-request-history', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Blood Request History' },
         { href: '/BloodDonation/asknearbydonor', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Ask Nearby Donor' },
+        { href: '/BloodDonation/nearby-request-history', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Nearby Request History' },
+        { href: '/BloodDonation/feedback', icon: <RiProfileLine size="18" className="text-gray-950" />, label: 'Feedback' },
     ];
 
     const sidebarLinks = () => {

@@ -18,6 +18,11 @@ import BloodReuestForm from './Dashboard/BloodRequestForm/BloodRequestForm';
 import BloodRequestsAdmin from './Dashboard/AdminBloodRequest/BloodRequestsAdmin';
 import BloodRequestHistory from './Dashboard/BloodRequestHistory/BloodRequestHistory';
 import AskNearByDonor from './Dashboard/asknearbydonor/AskNearByDonor';
+import AllReqToDonor from './Dashboard/AllReqToDonor/AllReqToDonor';
+import ManageNearByReq from './Dashboard/managenearbybloodreq/ManageNearByReq';
+import NearbyRequestHistory from './Dashboard/NearbyRequestHistory/NearbyRequestHistory';
+import Feedback from './Dashboard/feedback/Feedback';
+import AllFeedbacks from './Dashboard/feedback/AllFeedbacks';
 
 export default function App() {
   return (
@@ -38,6 +43,11 @@ export default function App() {
           <Route path="blood-requests-admin" element={<BloodRequestsAdmin />} />
           <Route path="blood-request-history" element={<BloodRequestHistory />} />
           <Route path="asknearbydonor" element={<AskNearByDonor />} />
+          <Route path="all-req-to-donor" element={<AllReqToDonor />} />
+          <Route path="managenearbybloodreq" element={<ManageNearByReq />} />
+          <Route path="nearby-request-history" element={<NearbyRequestHistory />} />
+          <Route path="feedback" element={<Feedback />} />
+          <Route path="all-feedbacks" element={<AllFeedbacks />} />
         </Route>
       </Routes>
 

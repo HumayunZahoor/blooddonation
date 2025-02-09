@@ -8,6 +8,7 @@ import authRouter from "./routes/authRoutes.js";
 import donorRoutes from './routes/donorRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
 import hospitalRoutes from './routes/hospitalRoutes.js';
+import fbRoutes from './routes/fbRoutes.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -39,6 +40,7 @@ app.use('/auth', authRouter);
 app.use('/donor', donorRoutes);
 app.use('/admin', adminRoutes);
 app.use('/hospital', hospitalRoutes);
+app.use('/feedback', fbRoutes);
 
 
 const PORT = process.env.PORT || 3005;

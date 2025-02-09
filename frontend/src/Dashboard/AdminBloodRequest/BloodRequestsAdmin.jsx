@@ -43,7 +43,9 @@ export default function BloodRequestsAdmin() {
                     <p className="text-white text-center">No blood requests available.</p>
                 ) : (
                     <div className="space-y-4">
-                        {requests.map((request) => (
+                        {requests
+                        .filter((request) => request.status === "Pending" || request.dispatched === false)
+                        .map((request) => (
                             <div key={request._id} className="bg-gray-800 p-4 rounded shadow">
                                 <p className="text-white">
                                     <strong>User:</strong> {request.userId?.name || "Unknown"} ({request.userId?.email})

@@ -86,8 +86,8 @@ export const updateRequestStatus = async (req, res) => {
             return res.status(404).json({ message: "Request not found" });
         }
 
-        // If status is "Accepted", update the Blood Bank stock
-        if (status === "Accepted") {
+        // Check if status is being updated to "Accepted" from a different status
+        if (status === "Accepted" && request.status !== "Accepted") {
             const bloodTypeKey = request.bloodType.replace("+", "_Pos").replace("-", "_Neg");
 
             // Find the blood bank stock
@@ -113,6 +113,7 @@ export const updateRequestStatus = async (req, res) => {
         res.status(500).json({ message: "Server Error" });
     }
 };
+
 
 // ---------------------------------------------------------
 
