@@ -149,6 +149,44 @@ export default function AskNearByDonor() {
                     </table>
                 </div>
             </div>
+
+            {modalOpen && (
+                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                    <div className="bg-white p-6 rounded-lg w-96">
+                        <h2 className="text-xl font-bold mb-4 text-gray-800">Request Blood from {selectedDonor?.name}</h2>
+                        <p className="text-gray-600 mb-4">Blood Type: <span className="font-semibold">{selectedDonor?.bloodType}</span></p>
+
+                        {/* Blood Request Form */}
+                        <form onSubmit={handleSubmit}>
+                            <label className="block text-gray-700 font-semibold mb-2">Enter Units:</label>
+                            <input
+                                type="number"
+                                value={units}
+                                onChange={(e) => setUnits(e.target.value)}
+                                min="1"
+                                required
+                                className="w-full px-3 py-2 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+
+                            <div className="flex justify-end space-x-4">
+                                <button
+                                    type="button"
+                                    onClick={closeModal}
+                                    className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-700 transition"
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    type="submit"
+                                    className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
+                                >
+                                    Submit Request
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
